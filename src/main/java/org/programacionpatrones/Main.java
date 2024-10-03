@@ -1,3 +1,6 @@
+// Jose Pablo Navarro
+// Diego Alonso Selva Arrieta
+
 package org.programacionpatrones;
 
 import org.patrones.*;
