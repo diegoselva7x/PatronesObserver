@@ -36,14 +36,20 @@ public class Main {
         folder.add(new File("File4.txt"));
         folder.add(new File("File5.txt"));
         FolderObserver folderObserver = new FolderObserver("Observer del folder");
+        FolderObserver folderObserver2 = new FolderObserver("Observer2 del folder");
+
         folder.addObserver(folderObserver);
+        folder.addObserver(folderObserver2);
 
         Folder subFolder = new Folder("SubCarpeta");
         subFolder.add(new File("File6.txt"));
 
         folder.add(subFolder);
+        subFolder.addObserver(folderObserver);
+        subFolder.change();
 
         folder.showDetails();
+        folder.change();
     }
 
 }

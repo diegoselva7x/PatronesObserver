@@ -22,6 +22,16 @@ public class Folder implements FileComponent {
     public void addObserver(Observer observer) {
         observers.add(observer);
     }
+
+    public void notifyObservers() {
+        for (Observer observer : observers) {
+            observer.update("El archivo " + name + " ha cambiado.");
+        }
+    }
+    public void change() {
+        notifyObservers();
+    }
+
     @Override
     public void add(FileComponent file) {
         fileComponents.add(file);
