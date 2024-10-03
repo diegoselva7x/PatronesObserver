@@ -1,4 +1,4 @@
-package org.programacionpatrones;
+package org.patrones;
 
 // Observer.java
 public interface Observer {
